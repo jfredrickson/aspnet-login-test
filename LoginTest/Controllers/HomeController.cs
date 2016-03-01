@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoginTest.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +9,11 @@ namespace LoginTest.Controllers
 {
     public class HomeController : Controller
     {
+        private AppContext db = new AppContext();
+
         public ActionResult Index()
         {
+            ViewBag.Roles = db.Roles.ToList();
             return View();
         }
 
