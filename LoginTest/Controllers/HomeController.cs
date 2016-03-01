@@ -13,17 +13,21 @@ namespace LoginTest.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Administrator()
         {
-            ViewBag.Message = "Your application description page.";
-
+            ViewBag.Message = "Administrator home page.";
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Analyst()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Analyst home page.";
+            return View();
+        }
 
+        public ActionResult Respondent()
+        {
+            ViewBag.Message = "Respondent home page.";
             return View();
         }
     }
