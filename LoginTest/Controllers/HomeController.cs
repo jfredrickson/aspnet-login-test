@@ -17,18 +17,21 @@ namespace LoginTest.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Administrator")]
         public ActionResult Administrator()
         {
             ViewBag.Message = "Administrator home page.";
             return View();
         }
 
+        [Authorize(Roles = "Analyst")]
         public ActionResult Analyst()
         {
             ViewBag.Message = "Analyst home page.";
             return View();
         }
 
+        [Authorize(Roles = "Respondent")]
         public ActionResult Respondent()
         {
             ViewBag.Message = "Respondent home page.";
