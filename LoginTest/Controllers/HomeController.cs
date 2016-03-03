@@ -37,5 +37,11 @@ namespace LoginTest.Controllers
             ViewBag.Message = "Respondent home page.";
             return View();
         }
+
+        public ActionResult Logout()
+        {
+            Session.Abandon();
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
