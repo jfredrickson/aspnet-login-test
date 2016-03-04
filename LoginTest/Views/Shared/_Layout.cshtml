@@ -34,7 +34,8 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>Hostname: @Request.Url.Host</p>
+            <p>@Html.ActionLink("Logout", "Logout", "Home")</p>
+            <p><a href="?loginUsername=DVA\test.user1">Login as DVA\test.user1</a></p>
         </footer>
     </div>
 
