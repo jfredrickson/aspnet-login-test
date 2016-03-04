@@ -8,6 +8,18 @@ using System.Web.SessionState;
 
 namespace LoginTest.Modules
 {
+    /// <summary>
+    /// Allows a tester to override Windows Authentication by using the
+    /// 'loginUsername' URL parameter. This module ensures that the user
+    /// principal in the context is always set to the given overridding user
+    /// principal. The override can be cleared by resetting the session
+    /// (i.e., Session.Abandon()).
+    /// 
+    /// Note that the overridding username given in the URL parameter must
+    /// actually be a valid user in the application.
+    /// 
+    /// Example: http://hostname/?loginUsername=TEST\test.user1
+    /// </summary>
     public class AuthenticationOverride : IHttpModule, IRequiresSessionState
     {
         private AppContext db = new AppContext();
